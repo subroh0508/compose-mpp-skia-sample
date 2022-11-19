@@ -1,12 +1,15 @@
-import androidx.compose.material.Text
-import androidx.compose.ui.window.Window
-import androidx.compose.ui.window.application
+import androidx.compose.desktop.ui.tooling.preview.Preview
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.window.singleWindowApplication
 
 fun main() {
-    application {
-        Window(
-            onCloseRequest = {},
-            title = "Compose MPP Skia Sample",
-        ) { Text("Hello, World!") }
-    }
+    singleWindowApplication(
+        title = "Compose MPP Skia Sample",
+    ) { SampleApp() }
+}
+
+@Preview
+@Composable
+fun SamplePreview() {
+    SampleApp()
 }

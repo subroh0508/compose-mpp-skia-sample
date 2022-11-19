@@ -1,8 +1,15 @@
-import org.jetbrains.compose.web.dom.Text
-import org.jetbrains.compose.web.renderComposable
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.window.Window
+import org.jetbrains.skiko.wasm.onWasmReady
 
 fun main() {
-    renderComposable(rootElementId = "root") {
-        Text("Hello, World!")
+    onWasmReady {
+        Window("Compose MPP Skia Sample") {
+            Column(modifier = Modifier.fillMaxSize()) {
+                SampleApp()
+            }
+        }
     }
 }

@@ -60,6 +60,10 @@ tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "11"
 }
 
+compose.experimental {
+    web.application {}
+}
+
 android {
     compileSdk = 33
 
